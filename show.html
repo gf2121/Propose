@@ -95,7 +95,11 @@
 
 </head>
 
+
 <body>
+<audio id="music2" autoplay="autoplay" loop="loop">
+    <source src="./bgMusic2.mp3" type="audio/mpeg">
+</audio>
 <div class="cs">
     <img src="images/lover.jpg" id="logo">
 </div>
@@ -132,7 +136,7 @@
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
             //想说的话
-            S.UI.simulate("你是我|最想留住的|幸运|马远|嫁给我吧！|#countdown 3|#time");
+            S.UI.simulate("3|2|1|你是我|最想留住的|幸运|马远|嫁给我吧！");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });
@@ -249,16 +253,7 @@
                         value = value > 0 ? value : 10;
 
                         timedAction(function (index) {
-                            if (index === 0) {
-                                if (sequence.length === 0) {
-                                    S.Shape.switchShape(S.ShapeBuilder.letter(''));
-                                } else {
-                                    window.open('result.html', '_self');
-                                    performAction(sequence);
-                                }
-                            } else {
-                                S.Shape.switchShape(S.ShapeBuilder.letter(index), true);
-                            }
+                            S.Shape.switchShape(S.ShapeBuilder.letter(index), true);
                         }, 1000, value, true);
                         break;
 

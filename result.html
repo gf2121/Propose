@@ -10630,9 +10630,9 @@
         <div class="c-tips-container" id="c-tips-container"></div>
     </div>
 </div>
-<audio id="music" autoplay="autoplay" loop="loop">
-    <source src="./bgMusic.mp3" type="audio/mpeg">
-</audio>
+// <audio id="music" autoplay="autoplay" loop="loop">
+//     <source src="./bgMusic.mp3" type="audio/mpeg">
+// </audio>
 <script type="text/javascript"
         src="https://dss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
 <script src="sakura.js"></script>
@@ -10647,7 +10647,7 @@
         allLinks[i].href = "javascript:;"
         allLinks[i].target = "_self";
         allLinks[i].onclick = () => {
-            document.getElementById("music").play();
+            // document.getElementById("music").play();
             alert(loveWords[Math.floor(Math.random() * loveWords.length)]);
         };
     }
